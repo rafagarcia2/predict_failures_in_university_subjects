@@ -35,14 +35,6 @@ def process_args(args):
 
         logger.info("Creating run")
         with wandb.init(job_type="download") as run:
-            # if len(args.list_files_urls) > 0:
-            #     for file in args.list_files_urls:
-            #         # Download the file streaming and write to open temp file
-            #         logger.info(file)
-            #         with requests.get(file, stream=True) as r:
-            #             for chunk in r.iter_content(chunk_size=8192):
-            #                 fp.write(chunk)
-            # else:
             # Download the file streaming and write to open temp file
             with requests.get(args.file_url, stream=True) as r:
                 for chunk in r.iter_content(chunk_size=8192):
@@ -71,10 +63,6 @@ if __name__ == "__main__":
 
     parser.add_argument(
         "--file_url", type=str, help="URL to the input file", required=True
-    )
-
-    parser.add_argument(
-        "--list_files_urls", type=list, help="List with URL to the input file", required=False, default=[]
     )
 
     parser.add_argument(

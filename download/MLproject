@@ -7,9 +7,6 @@ entry_points:
       file_url:
         description: URL of the file to download
         type: uri
-      list_files_urls:
-        description: List of URL of the file to download
-        type: list
       artifact_name:
         description: Name for the W&B artifact that will be created
         type: str
@@ -23,7 +20,6 @@ entry_points:
 
     command: >-
       python download.py --file_url {file_url} \
-                              --list_files_urls {list_files_urls} \
                               --artifact_name {artifact_name} \
                               --artifact_type {artifact_type} \
                               --artifact_description {artifact_description}
