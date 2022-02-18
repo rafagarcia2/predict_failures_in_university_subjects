@@ -1,0 +1,19 @@
+main:
+  project_name: predict_failures_in_university_subjects
+  experiment_name: dev
+data:
+  file_url: https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/79071c21-e32c-438f-b930-d1b6ccc02ec2/download/matricula-componente-20171.csv
+  enrollments:
+    # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/79071c21-e32c-438f-b930-d1b6ccc02ec2/download/matricula-componente-20171.csv
+    # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/55dfe713-ff7c-4fa8-8d1d-d4294a025bff/download/matricula-componente-20172.csv
+    # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/3c1feba4-ced1-466e-8e94-a040224a51dc/download/matricula-componente-20181.csv
+    # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/0bfcaf6a-4424-4983-8ba8-d330350a8fbe/download/matricula-componente-20182.csv
+    # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/6d66d15a-8d0f-43a3-902b-d314f4a2a296/download/matricula-componente-20191.csv
+    # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/0d573a4f-de65-4c3d-b6bb-337473bc4e44/download/matricula-componente-20192.csv
+  # classes:
+  #   - https://dados.ufrn.br/dataset/1938623d-fb07-41a4-a55a-1691f7c3b8b5/resource/5e77d066-d506-45eb-a21e-76aa79616fef/download/turmas-2017.1.csv
+  #   - https://dados.ufrn.br/dataset/1938623d-fb07-41a4-a55a-1691f7c3b8b5/resource/01fe7343-fdf0-4a67-b915-2386b7c2fecb/download/turmas-2017.2.csv
+  #   - https://dados.ufrn.br/dataset/1938623d-fb07-41a4-a55a-1691f7c3b8b5/resource/3ae16138-4214-4a30-ac2d-6cffd6237031/download/turmas-2018.1.csv
+  #   - https://dados.ufrn.br/dataset/1938623d-fb07-41a4-a55a-1691f7c3b8b5/resource/77fe7603-0e71-4e21-8cd4-cb823353023f/download/turmas-2018.2.csv
+  #   - https://dados.ufrn.br/dataset/1938623d-fb07-41a4-a55a-1691f7c3b8b5/resource/1e42cd66-69d6-48d5-a346-d46766fd2c9c/download/turmas-2019.1.csv
+  #   - https://dados.ufrn.br/dataset/1938623d-fb07-41a4-a55a-1691f7c3b8b5/resource/d9c2863e-d1b2-4afd-b7dd-09517d5ed17d/download/turmas-2019.2.csv
