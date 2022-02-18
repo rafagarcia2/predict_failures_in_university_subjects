@@ -1,5 +1,9 @@
 # processed data
-Dataset/processed
+Dataset
+data
+wandb/
+mlruns/
+outputs/
 
 
 # Byte-compiled / optimized / DLL files
