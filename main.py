@@ -26,13 +26,22 @@ def process_args(config: DictConfig):
         os.path.join(root_path, "download"),
         "main",
         parameters={
-            "file_url": config["data"]["file_url"],
-            "list_files_urls": config["data"]["enrollments"],
+            "file_url": config["data"]["enrollments_url"],
             "artifact_name": "matriculas.csv",
             "artifact_type": "raw_data",
             "artifact_description": "enrollments in subjects"
         },
     )
 
+    _ = mlflow.run(
+        os.path.join(root_path, "download"),
+        "main",
+        parameters={
+            "file_url": config["data"]["classes_url"],
+            "artifact_name": "turmas.csv",
+            "artifact_type": "raw_data",
+            "artifact_description": "classes"
+        },
+    )
 if __name__ == "__main__":
     process_args()
