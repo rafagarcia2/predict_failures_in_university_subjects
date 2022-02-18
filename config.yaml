@@ -5,8 +5,8 @@ main:
     - download
     - preprocess
     - check_data
-    - segregate
-    - decision_tree
+    - segregation
+    - random_forest
     - evaluate
   random_seed: 42
 data:
@@ -20,3 +20,11 @@ data:
   # Stratify according to the target when splitting the data
   # in train/test or in train/val
   stratify: reprovou
+random_forest_pipeline:
+  random_forest:
+    criterion: "entropy"
+    splitter: "best"
+    max_depth: 13
+  numerical_pipe:
+    model: 0
+  export_artifact: "model_export"
