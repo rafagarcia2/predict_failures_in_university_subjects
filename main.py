@@ -50,10 +50,23 @@ def process_args(config: DictConfig):
         parameters={
             "matr_input_artifact": "matriculas.csv:latest",
             "turmas_input_artifact": "turmas.csv:latest",
-            "artifact_name": "clean_data.csv",
+            "artifact_name": "preprocessed_data.csv",
             "artifact_type": "processed_data",
             "artifact_description": "Cleaned data"
         },
+    )
+
+    _ = mlflow.run(
+        os.path.join(root_path, "segregation"),
+        "main",
+        parameters={
+            "input_artifact": "preprocessed_data.csv:latest",
+            "artifact_root": "data",
+            "artifact_type": "segregated_data",
+            "test_size": config["data"]["test_size"],
+            "stratify": config["data"]["stratify"],
+            "random_state": config["main"]["random_seed"]
+        }
     )
 
 if __name__ == "__main__":
