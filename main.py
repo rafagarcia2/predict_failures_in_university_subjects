@@ -66,16 +66,16 @@ def process_args(config: DictConfig):
             },
         )
 
-    # if "check_data" in steps_to_execute:
-    #     _ = mlflow.run(
-    #         os.path.join(root_path, "check_data"),
-    #         "main",
-    #         parameters={
-    #             "reference_artifact": config["data"]["reference_dataset"],
-    #             "sample_artifact": "preprocessed_data.csv:latest",
-    #             "ks_alpha": config["data"]["ks_alpha"]
-    #         }
-    #     )
+    if "data_checks" in steps_to_execute:
+        _ = mlflow.run(
+            os.path.join(root_path, "data_checks"),
+            "main",
+            parameters={
+                "reference_artifact": config["data"]["reference_dataset"],
+                "sample_artifact": "preprocessed_data.csv:latest",
+                "ks_alpha": config["data"]["ks_alpha"]
+            }
+        )
 
     if "segregate" in steps_to_execute:
         _ = mlflow.run(
