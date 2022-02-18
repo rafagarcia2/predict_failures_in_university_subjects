@@ -43,5 +43,18 @@ def process_args(config: DictConfig):
             "artifact_description": "classes"
         },
     )
+
+    _ = mlflow.run(
+        os.path.join(root_path, "preprocessing"),
+        "main",
+        parameters={
+            "matr_input_artifact": "matriculas.csv:latest",
+            "turmas_input_artifact": "turmas.csv:latest",
+            "artifact_name": "clean_data.csv",
+            "artifact_type": "processed_data",
+            "artifact_description": "Cleaned data"
+        },
+    )
+
 if __name__ == "__main__":
     process_args()

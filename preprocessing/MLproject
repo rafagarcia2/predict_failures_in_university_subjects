@@ -1,0 +1,29 @@
+name: preprocessing
+conda_env: conda.yml
+
+entry_points:
+  main:
+    parameters:
+      matr_input_artifact:
+        description: Fully-qualified artifact name for the matriculas input artifact
+        type: uri
+      turmas_input_artifact:
+        description: Fully-qualified artifact name for the turmas input artifact
+        type: uri
+      artifact_name:
+        description: Name for the W&B artifact that will be created
+        type: str
+      artifact_type:
+        description: Type of the artifact to create
+        type: str
+        default: raw_data
+      artifact_description:
+        description: Description for the artifact
+        type: str
+
+    command: >-
+      python run.py --matr_input_artifact {matr_input_artifact} \
+                    --turmas_input_artifact {turmas_input_artifact} \
+                    --artifact_name {artifact_name} \
+                    --artifact_type {artifact_type} \
+                    --artifact_description {artifact_description}
