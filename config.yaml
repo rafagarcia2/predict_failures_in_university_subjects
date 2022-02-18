@@ -4,7 +4,7 @@ main:
   execute_steps:
     - download
     - preprocess
-    - check_data
+    - data_checks
     - segregation
     - random_forest
     - evaluate
@@ -13,8 +13,9 @@ data:
   file_url: https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/79071c21-e32c-438f-b930-d1b6ccc02ec2/download/matricula-componente-20171.csv
   enrollments_url: https://drive.google.com/uc?id=1YuHdRjQQRf_c9_5ME7AgeNQxZ9qt2wl7
   classes_url: https://drive.google.com/uc?id=1L6KQJVZ2hS6GfCHv3kjJcZxL9eRDB8n4
-  # Segregation
-  ks_alpha: 0.05
+  reference_dataset: matriculas.csv:latest
+  # Threshold for Kolomorov-Smirnov test
+  ks_alpha: 0.1
   test_size: 0.3
   val_size: 0.3
   # Stratify according to the target when splitting the data
