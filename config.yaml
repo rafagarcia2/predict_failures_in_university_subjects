@@ -3,8 +3,8 @@ main:
   experiment_name: dev
 data:
   file_url: https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/79071c21-e32c-438f-b930-d1b6ccc02ec2/download/matricula-componente-20171.csv
-  enrollments_url: https://drive.google.com/file/d/1YuHdRjQQRf_c9_5ME7AgeNQxZ9qt2wl7/view?usp=sharing
-  classes_url: https://drive.google.com/file/d/1L6KQJVZ2hS6GfCHv3kjJcZxL9eRDB8n4/view?usp=sharing
+  enrollments_url: https://drive.google.com/uc?id=1YuHdRjQQRf_c9_5ME7AgeNQxZ9qt2wl7
+  classes_url: https://drive.google.com/uc?id=1L6KQJVZ2hS6GfCHv3kjJcZxL9eRDB8n4
     # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/79071c21-e32c-438f-b930-d1b6ccc02ec2/download/matricula-componente-20171.csv
     # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/55dfe713-ff7c-4fa8-8d1d-d4294a025bff/download/matricula-componente-20172.csv
     # - https://dados.ufrn.br/dataset/c8650d55-3c5a-4787-a126-d28a4ef902a6/resource/3c1feba4-ced1-466e-8e94-a040224a51dc/download/matricula-componente-20181.csv
