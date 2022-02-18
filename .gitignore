@@ -1,3 +1,11 @@
+# processed data
+Dataset
+data
+wandb/
+mlruns/
+outputs/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
