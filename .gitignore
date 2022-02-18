@@ -4,6 +4,7 @@ data
 wandb/
 mlruns/
 outputs/
+artifacts/
 
 
 # Byte-compiled / optimized / DLL files

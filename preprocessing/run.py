@@ -193,16 +193,19 @@ def process_args(args):
 
     matriculas_c2 = pd.merge(matriculas_c2, turmas[['id_turma', 'professor_tx_reprovao']], on='id_turma', how='left')
 
+    matriculas_c2 = matriculas_c2.drop_duplicates()
+    matriculas_c2.professor_tx_reprovao.fillna(matriculas_c2.professor_tx_reprovao.median(), inplace=True)
+
     logger.info("Creating artifact")
 
-    matriculas_c2.to_csv("clean_data.csv")
+    matriculas_c2.to_csv(args.artifact_name)
 
     artifact = wandb.Artifact(
         name=args.artifact_name,
         type=args.artifact_type,
         description=args.artifact_description,
     )
-    artifact.add_file("clean_data.csv")
+    artifact.add_file(args.artifact_name)
 
     logger.info("Logging artifact")
     run.log_artifact(artifact)
