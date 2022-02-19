@@ -35,6 +35,15 @@ Para construir o pipeline e subir o modelo para produção, foram utilizadas vá
 - Conda
 
 
+### Reproduzindo o pipelina:
+Para facilitar o entendimento e permitir a reprodução do pipeline, disponibilizamos alguns tutoriais demonstrando como executar o projeto corretamente:
+1. [Entendendo a problemática](https://www.loom.com/share/8da8a47ba75b40d8a7e8b6ca8670e43b)
+2. [Pipeline de reprodução e MLflow](https://www.loom.com/share/e63bdb14b3ff4154992c40bc24ef7b1b)
+3. [Download e Pré-processamento](https://www.loom.com/share/59f83f52cba3479bb3d4144a3ca06c77)
+4. [Testes e separação em train/test](https://www.loom.com/share/e97cfbad6fca4c44a8a2bd484b3da96e)
+5. [Modelo e Análise de resultados](https://www.loom.com/share/603824da895d48f087452d1fe519cce2)
+
+
 ### Conclusão:
  
 O aprendizado que conseguimos obter depois de construir todo esse pipeline de dados é gigantesco! Desde a elaboração da problemática até colocar o modelo em produção de uma forma reprodutível, escalável e dirigido a testes, com certeza agrega muito valor em nossa formação.
