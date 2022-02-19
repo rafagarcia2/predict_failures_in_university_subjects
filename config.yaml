@@ -3,7 +3,7 @@ main:
   experiment_name: dev
   execute_steps:
     - download
-    - preprocess
+    - preprocessing
     - data_checks
     - segregation
     - random_forest

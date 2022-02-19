@@ -53,7 +53,7 @@ def process_args(config: DictConfig):
             },
         )
 
-    if "preprocess" in steps_to_execute:
+    if "preprocessing" in steps_to_execute:
         _ = mlflow.run(
             os.path.join(root_path, "preprocessing"),
             "main",
@@ -77,7 +77,7 @@ def process_args(config: DictConfig):
             }
         )
 
-    if "segregate" in steps_to_execute:
+    if "segregation" in steps_to_execute:
         _ = mlflow.run(
             os.path.join(root_path, "segregation"),
             "main",
